@@ -5,8 +5,15 @@ import Cell from "./Cell/Cell";
 import cls from "./Board.module.css";
 
 const Board = () => {
-  const { firstEleven } = useSelector(({ players }) => players);
-  const positions = useMemo(() => positionPlayers(firstEleven), [firstEleven]);
+  const {
+    players: { firstEleven },
+    tactic,
+  } = useSelector((store) => store);
+
+  const positions = useMemo(
+    () => positionPlayers(firstEleven, tactic),
+    [firstEleven, tactic]
+  );
 
   return (
     <div className={cls.container}>

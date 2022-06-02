@@ -33,6 +33,8 @@ export enum EPlayerPosition {
   GOALKEEPER = "GOALKEEPER",
 }
 
-export enum Formations {
+export enum EFormations {
   CLASSIC = "CLASSIC",
+  ATTACK = "ATTACK",
+  DEF = "DEF",
 }

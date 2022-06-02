@@ -2,6 +2,6 @@ export enum EPlayerTypes {
   DROP = "DROP ",
 }
 
-export enum ECursorActions {
-  SET_PROPS = "SET_PROPS",
+export enum ETacticAction {
+  SET = "SET TACTIC",
 }

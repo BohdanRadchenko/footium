@@ -20,9 +20,6 @@ const Dustbin = ({ children, player }: TDustbinProps) => {
         isOver: monitor.isOver(),
         canDrop: monitor.canDrop(),
       }),
-      options: {
-        dropEffect: "copy",
-      },
     }),
     [player]
   );

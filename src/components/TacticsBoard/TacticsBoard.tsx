@@ -6,27 +6,33 @@ import classes from "./TacticsBoard.module.css";
 import Box from "../Box/Box";
 import Dustbin from "../Dustbin/Dustbin";
 import { Team } from "../../types";
+import Formation from "./Pitch/Formation/Formation";
 
 const TacticsBoard: FC = () => {
   const { subs } = useSelector(({ players }) => players as Team);
 
   return (
-    <div className={classes.container}>
-      <div className={classes.board}>
-        <Pitch />
-      </div>
-      <div className={classes.subsCol}>
-        {Boolean(subs) &&
-          Boolean(subs.length) &&
-          subs.map((player) => (
-            <Fragment key={player.id}>
-              <Dustbin player={player}>
-                <Box player={player}>
-                  <Substitute player={player} />
-                </Box>
-              </Dustbin>
-            </Fragment>
-          ))}
+    <div>
+      <Formation />
+      <div>
+        <div className={classes.container}>
+          <div className={classes.board}>
+            <Pitch />
+          </div>
+          <div className={classes.subsCol}>
+            {Boolean(subs) &&
+              Boolean(subs.length) &&
+              subs.map((player) => (
+                <Fragment key={player.id}>
+                  <Dustbin player={player}>
+                    <Box player={player}>
+                      <Substitute player={player} />
+                    </Box>
+                  </Dustbin>
+                </Fragment>
+              ))}
+          </div>
+        </div>
       </div>
     </div>
   );
