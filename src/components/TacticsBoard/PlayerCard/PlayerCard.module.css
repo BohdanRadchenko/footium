@@ -1,6 +1,8 @@
 .container {
-  height: 105px;
-  width: 130px;
+  /*height: 105px;*/
+  /*width: 130px;*/
+  height: inherit;
+  width: inherit;
   display: flex;
   flex-direction: column;
   align-items: center;

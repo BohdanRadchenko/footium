@@ -1,4 +1,4 @@
-import { Team } from "../types";
+import { Team } from "./types";
 
 export const team1: Team = {
   firstEleven: [

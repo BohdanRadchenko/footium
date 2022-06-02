@@ -27,3 +27,12 @@ export interface Team {
   firstEleven: Player[];
   subs: Player[];
 }
+
+export enum EPlayerPosition {
+  FIELD = "FIELD",
+  GOALKEEPER = "GOALKEEPER",
+}
+
+export enum Formations {
+  CLASSIC = "CLASSIC",
+}
